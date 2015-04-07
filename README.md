@@ -6,7 +6,7 @@ Company Homepage
 Based on "Agency" template from Bootstrap
 Header image by dreamstale, please visit http://www.dreamstale.com/10-free-grunge-blurred-backgrounds
 
-### Kontakt: datadonk23@gmail.com
+### Kontakt: office@datensensorium.co.at
 
 ### Lizenz: Apache License, Version 2 (siehe LICENSE)
 Copyright 2015 Thomas Treml
