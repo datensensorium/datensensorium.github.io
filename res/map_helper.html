@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title> Map - daten sensorium</title>   
+
+    <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;    
+            }
+    </style>
+  
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="../css/leaflet.css" />
+    
+</head>
+
+<body>
+
+    <script src="../js/leaflet.js"></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+
+    <div id="map" style="width:100%; height:100%">	
+	</div>
+	<script>
+	
+	/* Stamen Map */
+	var map = L.map('map').setView([48.0461530, 14.4256800], 12);
+	
+	var layer = new L.StamenTileLayer("toner");
+	map.addLayer(layer);
+	
+	/* Custom Marker */
+	var dsIcon = L.icon({
+		iconUrl: "../img/marker/ds_marker-icon_small.png",
+		iconSize:     [20, 30],
+		iconAnchor:   [10, 30],
+		popupAnchor:  [0, -30],
+	});
+	
+	var popupHTML = '<img src="../img/logos/Namenszug.png" alt="daten sensorium Logo" width="120" height="30">';
+	var popupContent = L.popup({keepInView:true,closeButton:true}).setContent(popupHTML);
+	var dsMarker = L.marker([48.0461530, 14.4256800], {icon: dsIcon}).addTo(map).bindPopup(popupContent);
+	
+	</script>
+    
+</body>
+
+</html>
